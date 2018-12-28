@@ -2,12 +2,12 @@
 
 ## Overview
 
-* [Purpose of This Overview](#purpose-of-this-overview, "Purpose of This Overview")
-* [What This Overview Does Not Cover](#what-this-overview-does-not-cover, "What This Overview Does Not Cover")
-* [What You Should Already Know Before Starting](#what-you-should-already-know-before-starting, "What You Should Already Know Before Starting")
-* [Overview Prerequisite Setup](#overview-prerequisite-setup, "Overview Prerequisite Setup")
-* [Crash Course Overview](#crash-course-overview, "Crash Course Overview")
-* [Acronyms](#acronyms, "Acronyms")
+* [Purpose of This Overview](#purpose-of-this-overview "Purpose of This Overview")
+* [What This Overview Does Not Cover](#what-this-overview-does-not-cover "What This Overview Does Not Cover")
+* [What You Should Already Know Before Starting](#what-you-should-already-know-before-starting "What You Should Already Know Before Starting")
+* [Overview Prerequisite Setup](#overview-prerequisite-setup "Overview Prerequisite Setup")
+* [Crash Course Overview](#crash-course-overview "Crash Course Overview")
+* [Acronyms](#acronyms "Acronyms")
 * [Resources](#resources "Resources")
 
 ## Purpose of This Overview
