@@ -1,16 +1,14 @@
 # Polymer 1.0 Testing
 
-Note: Please clone this repository locally to take advantage of navigating the anchor link.  Currently, the anchor links will only work locally when this repository is cloned to your machine.
-
 ## Overview
 
-* [Purpose of This Overview](##purpose-of-this-overview, "Purpose of This Overview")
-* [What This Overview Does Not Cover](##what-this-overview-does-not-cover, "What This Overview Does Not Cover")
-* [What You Should Already Know Before Starting](##what-you-should-already-know-before-starting, "What You Should Already Know Before Starting")
-* [Overview Prerequisite Setup](##overview-prerequisite-setup, "Overview Prerequisite Setup")
-* [Crash Course Overview](##crash-course-overview, "Crash Course Overview")
-* [Acronyms](##acronyms, "Acronyms")
-* [Resources](##resources "Resources")
+* [Purpose of This Overview](#purpose-of-this-overview "Purpose of This Overview")
+* [What This Overview Does Not Cover](#what-this-overview-does-not-cover "What This Overview Does Not Cover")
+* [What You Should Already Know Before Starting](#what-you-should-already-know-before-starting "What You Should Already Know Before Starting")
+* [Overview Prerequisite Setup](#overview-prerequisite-setup "Overview Prerequisite Setup")
+* [Crash Course Overview](#crash-course-overview "Crash Course Overview")
+* [Acronyms](#acronyms "Acronyms")
+* [Resources](#resources "Resources")
 
 ## Purpose of This Overview
 
@@ -23,7 +21,7 @@ Note: Please clone this repository locally to take advantage of navigating the a
   * How to Test Things
   * When to Test With Certain Things
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -46,7 +44,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
   * However, some of the great things here may only be applicable to Polymer 3.0 or JS imports.
   * [Open Web Component Test Examples](https://open-wc.org/recommendations/testing.html#example-tests "Test Examples")
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -59,7 +57,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
   * Plain JavaScript
   * Polymer 1.0
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -72,9 +70,9 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
   * Install `npm install mocha sinon chai --save-dev`
   * Update `npm update mocha sinon chai --save-dev`
 * More information about what these dependencies are and why you need them will be provided in the **Crash Course Overview** section.
-* Dependencies for this repository have already been installed.  However, if you are using VSCode, you will need to install the following extensions to take advantage of the [Test Explorer UI](###test-explorer-ui) VSCode extension.
+* Dependencies for this repository have already been installed.  However, if you are using VSCode, you will need to install the following extensions to take advantage of the [Test Explorer UI](#test-explorer-ui) VSCode extension.
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -105,17 +103,17 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
     "testExplorer.gutterDecoration": true
   }
   ```
-##### [back to Overview Prerequisite Setup](###overview-prerequisite-setup "Overview Prerequisite Setup")
+##### [back to Overview Prerequisite Setup](#overview-prerequisite-setup "Overview Prerequisite Setup")
 
 ---
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
 ## Crash Course Overview
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 | Frequently Asked Question                                            | Quick Summary                                                          | Reference
 |----------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -145,8 +143,8 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 
 | Frequently Asked Question                                            | Examples                                                                                                                                                                     | Reference
 |----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| What is the difference between a unit test and integration test?     | [Difference Between a Unit Test and an Integration Test](###difference-between-a-unit-test-and-an-integration-test "Difference Between a Unit Test and an Integration Test") | [What Is the Difference Between a Unit Test and Integration Test?](https://www.guru99.com/unit-test-vs-integration-test.html "What Is the Difference Between a Unit Test and Integration Test?")
-| What are the differences between a stub, mock, spy, fake, and dummy? | [Test Double Usage Conditions](###test-double-usage-conditions "Test Double Usage Conditions")                                                                               | [Test Double Differences](https://sinonjs.org/releases/latest "Test Double Differences")
+| What is the difference between a unit test and integration test?     | [Difference Between a Unit Test and an Integration Test](#difference-between-a-unit-test-and-an-integration-test "Difference Between a Unit Test and an Integration Test")   | [What Is the Difference Between a Unit Test and Integration Test?](https://www.guru99.com/unit-test-vs-integration-test.html "What Is the Difference Between a Unit Test and Integration Test?")
+| What are the differences between a stub, mock, spy, fake, and dummy? | [Test Double Usage Conditions](#test-double-usage-conditions "Test Double Usage Conditions")                                                                                 | [Test Double Differences](https://sinonjs.org/releases/latest "Test Double Differences")
 | How do I apply argument matching?                                    |                                                                                                                                                                              | [Sinon Argument Matchers](https://sinonjs.org/releases/latest/matchers "Sinon Argument Matchers")
 | How do I test an asynchronous method?                                |                                                                                                                                                                              | [Mocha Asynchronous Testing](https://mochajs.org/#asynchronous-code "Mocha Asynchronous Testing")
 | How do I test promises?                                              |                                                                                                                                                                              | [Mocha Promise Testing (resolve, reject)](https://sinonjs.org/releases/latest/stubs/#stubresolvesvalue "Mocha Promise (resolve, reject) Testing")
@@ -154,14 +152,14 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | How do I test the order of method calls?                             |                                                                                                                                                                              | [Sinon Assertions (Asserting Call Order)](https://sinonjs.org/releases/latest/assertions/#sinonassertcallorderspy1-spy2- "Sinon Assertions (Asserting Call Order)")
 | How do I manipulate a callback function?                             |                                                                                                                                                                              | [Sinon Replacing Callback Functions](https://sinonjs.org/releases/latest/sandbox/#sandboxreplaceobject-property-replacement "Sinon Replacing Callback Functions")
 | What is the `wct.config.json` file?                                  | [Local `wct.config.json` File](./wct.config.json "Example")                                                                                                                  | [WCT Config Documentation](https://github.com/Polymer/tools/tree/master/packages/web-component-tester#configuration "Configuration Snippet")
-| How do I run tests in the browser?                                   | [Running Tests From the Browser](###running-tests-from-the-browser "Running Tests From the Browser")                                                                         | [Polymer 1.0 Documentation](https://polymer-library.polymer-project.org/1.0/docs/tools/tests#run-tests-interactively "Browser Ran Tests")
-| How do I run tests from the command-line?                            | [Running Tests From the Command Line](###running-tests-from-the-command-line "Running Tests From the Command Line")                                                          | Same As [Running Tests From the Browser](###running-tests-from-the-browser "Running Tests From the Browser")
-| How do I debug tests?                                                | Same As [Running Tests From the Browser](###running-tests-from-the-browser "Running Tests From the Browser")                                                                 | By running tests in the browser (Polymer 1.0).
-| How do I add a new HTML test file?                                   | [Adding a New test.html File](###adding-a-new-test.html-file "Adding a New test.html File")                                                                                  | [Loading Suites `WCT.loadSuites([]);`](https://polymer-library.polymer-project.org/1.0/docs/tools/tests#test-sets "Loading Suites")
-| How do I test multiple different browsers locally?                   | [How Do I Test Multiple Different Browsers Locally?](###how-do-i-test-multiple-different-browsers-locally? "How Do I Test Multiple Different Browsers Locally?")             | [Launch Pad Resource](https://github.com/bitovi/launchpad "Launch Pad Resource")
-| Are there any Polymer online community site(s)?                      | [Resources](###resources) section for additional information.                                                                                                                | [Polymer Slack Channel](https://polymer.slack.com "Polymer Slack Channel") is an excellent Polymer community resource.
+| How do I run tests in the browser?                                   | [Running Tests From the Browser](#running-tests-from-the-browser "Running Tests From the Browser")                                                                           | [Polymer 1.0 Documentation](https://polymer-library.polymer-project.org/1.0/docs/tools/tests#run-tests-interactively "Browser Ran Tests")
+| How do I run tests from the command-line?                            | [Running Tests From the Command Line](#running-tests-from-the-command-line "Running Tests From the Command Line")                                                            | Same As [Running Tests From the Browser](#running-tests-from-the-browser "Running Tests From the Browser")
+| How do I debug tests?                                                | Same As [Running Tests From the Browser](#running-tests-from-the-browser "Running Tests From the Browser")                                                                   | By running tests in the browser (Polymer 1.0).
+| How do I add a new HTML test file?                                   | [Adding a New test.html File](#adding-a-new-test.html-file "Adding a New test.html File")                                                                                    | [Loading Suites `WCT.loadSuites([]);`](https://polymer-library.polymer-project.org/1.0/docs/tools/tests#test-sets "Loading Suites")
+| How do I test multiple different browsers locally?                   | [How Do I Test Multiple Different Browsers Locally?](#how-do-i-test-multiple-different-browsers-locally? "How Do I Test Multiple Different Browsers Locally?")               | [Launch Pad Resource](https://github.com/bitovi/launchpad "Launch Pad Resource")
+| Are there any Polymer online community site(s)?                      | [Resources](#resources) section for additional information.                                                                                                                  | [Polymer Slack Channel](https://polymer.slack.com "Polymer Slack Channel") is an excellent Polymer community resource.
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -176,7 +174,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | Mock        | When we **only** need to control what a collaborator returns **but** verify it's input arguments.     | `var` mock = `sinon`.`mock`(`obj`);
 
 
-##### [back to Crash Course Overview](##crash-course-overview "Crash Course Overview")
+##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
 
 ---
 
@@ -198,7 +196,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | Finding errors are easy.                                                                                                             | Finding errors are difficult.
 | Maintenance of unit test is cheap.                                                                                                   | Maintenance of integration test is expensive.
 
-##### [back to Crash Course Overview](##crash-course-overview "Crash Course Overview")
+##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
 
 ---
 
@@ -208,7 +206,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 2. Paste the following line in your desired browser to test.
     * e.g. `localhost:8080/test/ci-page-home_test.html`
 
-##### [back to Crash Course Overview](##crash-course-overview "Crash Course Overview")
+##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
 
 ---
 
@@ -224,7 +222,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | `polymer test`                                                                                           | Polymer web component tester command.              |
 | `polymer --help`                                                                                         | Polymer test help menu commands.                   |
 
-##### [back to Crash Course Overview](##crash-course-overview "Crash Course Overview")
+##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
 
 ---
 
@@ -315,7 +313,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 </script>
 ```
 
-##### [back to Crash Course Overview](##crash-course-overview "Crash Course Overview")
+##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
 
 ---
 
@@ -323,7 +321,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 
 1. Set the following key value pairs as **System** environment variables for your desired installed browsers.
 
-2. For Windows machine users, see [How to set Windows environment variables](###how-to-set-Windows-environment-variables).
+2. For Windows machine users, see [How to set Windows environment variables](#how-to-set-Windows-environment-variables).
 
     * Critical note for Windows users
         * Make sure all the following values are entered, then move their positions all the way to the top of environment variable path list. Windows will traverse through all environment variables when searching for appropriate key value pair matches.  This has been known to take three to five minutes to begin test runs if the environment variables are not immediately found at the top of the environment variable path list. Environment variables can be repositioned when entered as a **Path** environment variable.  This is only necessary when running tests locally via command line when Sauce Labs is disabled.
@@ -343,7 +341,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
     * Please install your environment variables accordingly.
     * Mac OS/Linux users don't have to worry about the position(s) of the environment variables.
 
-##### [back to Crash Course Overview](##crash-course-overview "Crash Course Overview")
+##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
 
 ---
 
@@ -360,7 +358,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 9. Click OK.
 10. Repeat 4 - 8 to add the remaining applicable key value pairs.
 
-##### [back to How Do I Test Multiple Different Browsers Locally?](##how-do-i-test-multiple-different-browsers-locally? "How Do I Test Multiple Different Browsers Locally?")
+##### [back to How Do I Test Multiple Different Browsers Locally?](#how-do-i-test-multiple-different-browsers-locally? "How Do I Test Multiple Different Browsers Locally?")
 
 ---
 
@@ -384,7 +382,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | vscode  | Visual Studio Code                 |
 | wct     | Web Component Tester               |
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -437,4 +435,4 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | What types of assertions can I make?                                 | [Expect Styles](https://www.chaijs.com/api/bdd "Expectations"), [Assert Styles](https://www.chaijs.com/api/assert "Assertions")
 | Why are Mocha arrow lambda functions discouraged?                    | [Avoiding Arrow Lambdas `()=>`](https://mochajs.org/#arrow-functions "Avoiding Arrow Lambdas")
 
-##### [back to top](#javascript-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
