@@ -21,7 +21,7 @@
   * How to Test Things
   * When to Test With Certain Things
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -44,7 +44,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
   * However, some of the great things here may only be applicable to Polymer 3.0 or JS imports.
   * [Open Web Component Test Examples](https://open-wc.org/recommendations/testing.html#example-tests "Test Examples")
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -57,7 +57,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
   * Plain JavaScript
   * Polymer 1.0
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -72,7 +72,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 * More information about what these dependencies are and why you need them will be provided in the **Crash Course Overview** section.
 * Dependencies for this repository have already been installed.  However, if you are using VSCode, you will need to install the following extensions to take advantage of the [Test Explorer UI](#test-explorer-ui) VSCode extension.
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -107,13 +107,13 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 
 ---
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
 ## Crash Course Overview
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 | Frequently Asked Question                                            | Quick Summary                                                          | Reference
 |----------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -159,7 +159,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | How do I test multiple different browsers locally?                   | [How Do I Test Multiple Different Browsers Locally?](#how-do-i-test-multiple-different-browsers-locally? "How Do I Test Multiple Different Browsers Locally?")               | [Launch Pad Resource](https://github.com/bitovi/launchpad "Launch Pad Resource")
 | Are there any Polymer online community site(s)?                      | [Resources](#resources) section for additional information.                                                                                                                  | [Polymer Slack Channel](https://polymer.slack.com "Polymer Slack Channel") is an excellent Polymer community resource.
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -382,7 +382,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | vscode  | Visual Studio Code                 |
 | wct     | Web Component Tester               |
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
 
 ---
 
@@ -435,4 +435,4 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | What types of assertions can I make?                                 | [Expect Styles](https://www.chaijs.com/api/bdd "Expectations"), [Assert Styles](https://www.chaijs.com/api/assert "Assertions")
 | Why are Mocha arrow lambda functions discouraged?                    | [Avoiding Arrow Lambdas `()=>`](https://mochajs.org/#arrow-functions "Avoiding Arrow Lambdas")
 
-##### [back to top](#polymer-1.0-testing "Home")
+##### [back to top](#polymer-10-testing "Home")
