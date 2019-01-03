@@ -5,7 +5,6 @@
 * [Purpose of This Overview](#purpose-of-this-overview "Purpose of This Overview")
 * [What This Overview Does Not Cover](#what-this-overview-does-not-cover "What This Overview Does Not Cover")
 * [What You Should Already Know Before Starting](#what-you-should-already-know-before-starting "What You Should Already Know Before Starting")
-* [Overview Prerequisite Setup](#overview-prerequisite-setup "Overview Prerequisite Setup")
 * [Crash Course Overview](#crash-course-overview "Crash Course Overview")
 * [Acronyms](#acronyms "Acronyms")
 * [Resources](#resources "Resources")
@@ -13,6 +12,7 @@
 ## Purpose of This Overview
 
 * The purpose of this overview is to learn the basics of Polymer 1.0 Testing using Mocha, Sinon, and Chai.
+* Please skip to the [Mocha Sinon Chai Cheatsheet - Coming Soon](#purpose-of-this-overview "Mocha Sinon Chai Cheatsheet") to see examples.
 * Separation of Concerns (the following items are broken up as much as possible for clarity).
   * Mocha, Sinon, Chai
   * Web Component Tester
@@ -39,10 +39,10 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 * Extensive Web Component Tester Configuration
 * Shady DOM & Shadow Dom Web Component Query Parameters [Polymer Polyfill Settings](https://polymer-library.polymer-project.org/2.0/docs/polyfills#settings "Polymer Polyfill Settings")
 * Extensive Debugging Techniques
-* Open Web Components [Robust Web Component Test Resources](https://open-wc.org/recommendations/testing.html#setup "open-wc")
+* Open Web Components [open-wc](https://open-wc.org/recommendations/testing.html#setup "open-wc")
   * This looks really interesting and worth looking into for a robust library of web component test helpers.
   * However, some of the great things here may only be applicable to Polymer 3.0 or JS imports.
-  * [Open Web Component Test Examples](https://open-wc.org/recommendations/testing.html#example-tests "Test Examples")
+  * [open-wc Example Tests](https://open-wc.org/recommendations/testing.html#example-tests "Open Web Component Example Tests")
 
 ##### [back to top](#polymer-10-testing "Home")
 
@@ -56,56 +56,6 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
   * npm package management
   * Plain JavaScript
   * Polymer 1.0
-
-##### [back to top](#polymer-10-testing "Home")
-
----
-
-## Overview Prerequisite Setup
-
-* The necessary dependencies for this Polymer 1.0 Testing overview repository have already been installed.
-* Martitz *auto-app-hyundai* should already have the necessary bower and npm installation.
-* If you are working in your own project referencing the examples here, make sure you have Mocha, Sinon, and Chai installed as dev dependencies in your project's package.json file.
-* Inspect the dev dependencies section of your project's package.json file to verify installation.  If they're already installed you can skip this step.  Otherwise, you can update them accordingly.
-  * Install `npm install mocha sinon chai --save-dev`
-  * Update `npm update mocha sinon chai --save-dev`
-* More information about what these dependencies are and why you need them will be provided in the **Crash Course Overview** section.
-* Dependencies for this repository have already been installed.  However, if you are using VSCode, you will need to install the following extensions to take advantage of the [Test Explorer UI](#test-explorer-ui) VSCode extension.
-
-##### [back to top](#polymer-10-testing "Home")
-
----
-
-### Test Explorer UI
-
-![Alt](images/test-explorer-ui-icon.png "Test Explorer UI")
-
-* Test Explorer UI is only compatible for Visual Studio Code users.  Robust IDE's like WebStorm offer built in test runner support.
-* Test explorer UI is not compatible with testing Polymer 1.0 web-components (HTML imports).
-* Make sure the extensions you install are from publisher *Holger Benl* as the configuration is setup explicitly for this publisher's set of extensions.  You can run the following commands via VSCode to make certain you have installed the correct extensions.
-
-  [Test Explorer UI](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer "Test Explorer UI")  (base extension)
-
-  `code --install-extension hbenl.vscode-test-explorer`
-
-  [Mocha Test Runner](https://marketplace.visualstudio.com/items?itemName=cstechnologies.vscode-mocha-test-runner "Mocha Test Runner")
-
-  `code --install-extension hbenl.vscode-mocha-test-adapter`
-
-* Add the following configuration lines to your `settings.json` (create one if it does not already exist).
-* Every test file in this overview will simply be named `test.js`.
-  ```json
-  {
-    "mochaExplorer.mochaPath": ".test-explorer-ui-transpiler.js",
-    "mochaExplorer.files": ".test_explorer_ui_transpilation/**/test.js",
-    "testExplorer.codeLens": true,
-    "testExplorer.errorDecoration": false,
-    "testExplorer.gutterDecoration": true
-  }
-  ```
-##### [back to Overview Prerequisite Setup](#overview-prerequisite-setup "Overview Prerequisite Setup")
-
----
 
 ##### [back to top](#polymer-10-testing "Home")
 
@@ -145,13 +95,13 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 |----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | What is the difference between a unit test and integration test?     | [Difference Between a Unit Test and an Integration Test](#difference-between-a-unit-test-and-an-integration-test "Difference Between a Unit Test and an Integration Test")   | [What Is the Difference Between a Unit Test and Integration Test?](https://www.guru99.com/unit-test-vs-integration-test.html "What Is the Difference Between a Unit Test and Integration Test?")
 | What are the differences between a stub, mock, spy, fake, and dummy? | [Test Double Usage Conditions](#test-double-usage-conditions "Test Double Usage Conditions")                                                                                 | [Test Double Differences](https://sinonjs.org/releases/latest "Test Double Differences")
-| How do I apply argument matching?                                    |                                                                                                                                                                              | [Sinon Argument Matchers](https://sinonjs.org/releases/latest/matchers "Sinon Argument Matchers")
-| How do I test an asynchronous method?                                |                                                                                                                                                                              | [Mocha Asynchronous Testing](https://mochajs.org/#asynchronous-code "Mocha Asynchronous Testing")
-| How do I test promises?                                              |                                                                                                                                                                              | [Mocha Promise Testing (resolve, reject)](https://sinonjs.org/releases/latest/stubs/#stubresolvesvalue "Mocha Promise (resolve, reject) Testing")
-| How do I mock an API call?                                           |                                                                                                                                                                              | [Sinon Request Fakes](https://sinonjs.org/releases/latest/fake-xhr-and-server "Sinon Request Fakes")
-| How do I test the order of method calls?                             |                                                                                                                                                                              | [Sinon Assertions (Asserting Call Order)](https://sinonjs.org/releases/latest/assertions/#sinonassertcallorderspy1-spy2- "Sinon Assertions (Asserting Call Order)")
-| How do I manipulate a callback function?                             |                                                                                                                                                                              | [Sinon Replacing Callback Functions](https://sinonjs.org/releases/latest/sandbox/#sandboxreplaceobject-property-replacement "Sinon Replacing Callback Functions")
-| What is the `wct.config.json` file?                                  | [Local `wct.config.json` File](./wct.config.json "Example")                                                                                                                  | [WCT Config Documentation](https://github.com/Polymer/tools/tree/master/packages/web-component-tester#configuration "Configuration Snippet")
+| How do I apply argument matching?                                    | [Mocha Sinon Chai Cheatsheet - Coming Soon](#crash-course-overview "Mocha Sinon Chai Cheatsheet")                                                                            | [Sinon Argument Matchers](https://sinonjs.org/releases/latest/matchers "Sinon Argument Matchers")
+| How do I test an asynchronous method?                                | [Mocha Sinon Chai Cheatsheet - Coming Soon](#crash-course-overview "Mocha Sinon Chai Cheatsheet")                                                                            | [Mocha Asynchronous Testing](https://mochajs.org/#asynchronous-code "Mocha Asynchronous Testing")
+| How do I test promises?                                              | [Mocha Sinon Chai Cheatsheet - Coming Soon](#crash-course-overview "Mocha Sinon Chai Cheatsheet")                                                                            | [Mocha Promise Testing (resolve, reject)](https://sinonjs.org/releases/latest/stubs/#stubresolvesvalue "Mocha Promise (resolve, reject) Testing")
+| How do I mock an API call?                                           | [Mocha Sinon Chai Cheatsheet - Coming Soon](#crash-course-overview "Mocha Sinon Chai Cheatsheet")                                                                            | [Sinon Request Fakes](https://sinonjs.org/releases/latest/fake-xhr-and-server "Sinon Request Fakes")
+| How do I test the order of method calls?                             | [Mocha Sinon Chai Cheatsheet - Coming Soon](#crash-course-overview "Mocha Sinon Chai Cheatsheet")                                                                            | [Sinon Assertions (Asserting Call Order)](https://sinonjs.org/releases/latest/assertions/#sinonassertcallorderspy1-spy2- "Sinon Assertions (Asserting Call Order)")
+| How do I manipulate a callback function?                             | [Mocha Sinon Chai Cheatsheet - Coming Soon](#crash-course-overview "Mocha Sinon Chai Cheatsheet")                                                                            | [Sinon Replacing Callback Functions](https://sinonjs.org/releases/latest/sandbox/#sandboxreplaceobject-property-replacement "Sinon Replacing Callback Functions")
+| What is the `wct.config.json` file?                                  | [`wct.config.json` File Example](#web-component-tester-configuration-file-example "`wct.config.json` File Example")                                                                                                                  | [WCT Config Documentation](https://github.com/Polymer/tools/tree/master/packages/web-component-tester#configuration "Configuration Snippet")
 | How do I run tests in the browser?                                   | [Running Tests From the Browser](#running-tests-from-the-browser "Running Tests From the Browser")                                                                           | [Polymer 1.0 Documentation](https://polymer-library.polymer-project.org/1.0/docs/tools/tests#run-tests-interactively "Browser Ran Tests")
 | How do I run tests from the command-line?                            | [Running Tests From the Command Line](#running-tests-from-the-command-line "Running Tests From the Command Line")                                                            | Same As [Running Tests From the Browser](#running-tests-from-the-browser "Running Tests From the Browser")
 | How do I debug tests?                                                | Same As [Running Tests From the Browser](#running-tests-from-the-browser "Running Tests From the Browser")                                                                   | By running tests in the browser (Polymer 1.0).
@@ -173,11 +123,56 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | Spy         | When the behavior of the spied-on function is not under test, you can use an anonymous function spy.  | `var` spy = `sinon`.`spy`(`object`,` `"`method`");
 | Mock        | When we **only** need to control what a collaborator returns **but** verify it's input arguments.     | `var` mock = `sinon`.`mock`(`obj`);
 
-
 ##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
 
 ---
 
+## Web Component Tester Configuration File Example
+
+```js
+{
+  "plugins": {
+    "local": {
+      "browsers": [
+        "chrome",
+        "firefox"
+      ],
+      "browserOptions": {
+        "chrome": [
+          "headless",
+          "disable-gpu",
+          "no-sandbox"
+        ],
+        "firefox": [
+          "-headless"
+        ]
+      }
+    },
+    "sauce": {
+      "disabled": true,
+      "browsers": [{
+          "browserName": "microsoftedge",
+          "platform": "Windows 10",
+          "version": ""
+        }, {
+          "browserName": "internet explorer",
+          "platform": "Windows 8.1",
+          "version": "11"
+        },
+        {
+          "browserName": "safari",
+          "platform": "OS X 10.11",
+          "version": "9"
+        }
+      ]
+    }
+  }
+}
+```
+
+##### [back to Crash Course Overview](#crash-course-overview "Crash Course Overview")
+
+---
 
 ### Difference Between a Unit Test and an Integration Test
 
@@ -409,6 +404,7 @@ This Polymer 1.0 Testing overview simply covers the basics of testing using Moch
 | Jasmine                                                              | [Jasmine](https://jasmine.github.io/ "Jasmine")
 | Maritz Sauce Labs Orientation                                        | [Sauce Labs Orientation](https://github.com/MaritzSTL/sauce-labs-orientation "Sauce Labs Orientation")
 | Mocha                                                                | [Mocha](https://mochajs.org "Mocha")
+| Mocha Sinon Chai Cheatsheet                                          | [Mocha Sinon Chai Cheatsheet - Coming Soon](#resources "Mocha Sinon Chai Cheatsheet")
 | Open Web Components                                                  | [Robust Web Component Test Resources](https://open-wc.org/recommendations/testing.html#setup "open-wc")
 | Open Web Components Test Examples                                    | [Open Web Component Test Examples](https://open-wc.org/recommendations/testing.html#example-tests "Test Examples")
 | Polymer 1.0 Library                                                  | [Polymer 1.0 Library](https://polymer-library.polymer-project.org/1.0/docs/devguide/feature-overview "Polymer 1.0 Library")
